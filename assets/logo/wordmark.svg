@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" role="img" aria-label="LACS — Linux Agent Control Standard">
+  <title>LACS — Linux Agent Control Standard</title>
+  <desc>LACS wordmark — the protocol specification logotype with the signal-orange accent.</desc>
+
+  <defs>
+    <linearGradient id="wm-promptGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FFB45A"/>
+      <stop offset="100%" stop-color="#FF6B1A"/>
+    </linearGradient>
+    <linearGradient id="wm-docGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2B3440"/>
+      <stop offset="100%" stop-color="#1B232B"/>
+    </linearGradient>
+    <filter id="wm-shadow" x="-5%" y="-10%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <filter id="wm-pillShadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect x="0" y="0" width="720" height="200" rx="20" ry="20" fill="#0F1419"/>
+
+  <!-- ── Mini logo mark (left column) ── -->
+  <g transform="translate(24, 24)" filter="url(#wm-shadow)">
+    <!-- Plate -->
+    <rect x="0" y="0" width="152" height="152" rx="32" ry="32" fill="#141C24"/>
+    <!-- Document -->
+    <rect x="20" y="16" width="84" height="104" rx="7" ry="7" fill="url(#wm-docGrad)"/>
+    <!-- Fold corner -->
+    <polygon points="80,16 104,16 104,34 80,34" fill="#0F1419" opacity="0.5"/>
+    <polyline points="80,16 80,34 104,34" fill="none" stroke="#FF6B1A" stroke-width="1.2" stroke-opacity="0.6"/>
+    <!-- Spec lines -->
+    <line x1="30" y1="46" x2="96" y2="46" stroke="#3A4A58" stroke-width="1.2"/>
+    <line x1="30" y1="55" x2="80" y2="55" stroke="#3A4A58" stroke-width="1.2"/>
+    <line x1="30" y1="64" x2="88" y2="64" stroke="#3A4A58" stroke-width="1"/>
+    <!-- Prompt chevron -->
+    <path d="M 30 74 L 52 88 L 30 102 L 38 102 L 64 88 L 38 74 Z"
+          fill="url(#wm-promptGrad)"/>
+    <!-- Cursor -->
+    <rect x="68" y="83" width="10" height="8" rx="1.5" ry="1.5" fill="#5EEAD4"/>
+    <!-- Pills -->
+    <rect x="20" y="110" width="20" height="9" rx="4.5" ry="4.5" fill="#1A3A2A" stroke="#34C47A" stroke-width="0.8"/>
+    <text x="30" y="117" font-family="system-ui,-apple-system,sans-serif" font-size="5" font-weight="700" fill="#34C47A" text-anchor="middle" letter-spacing="0.2">LOW</text>
+    <rect x="44" y="110" width="22" height="9" rx="4.5" ry="4.5" fill="#3A2A0A" stroke="#FFB45A" stroke-width="0.8"/>
+    <text x="55" y="117" font-family="system-ui,-apple-system,sans-serif" font-size="5" font-weight="700" fill="#FFB45A" text-anchor="middle" letter-spacing="0.2">MED</text>
+    <rect x="70" y="110" width="24" height="9" rx="4.5" ry="4.5" fill="#3A1A0A" stroke="#FF6B1A" stroke-width="0.8"/>
+    <text x="82" y="117" font-family="system-ui,-apple-system,sans-serif" font-size="5" font-weight="700" fill="#FF6B1A" text-anchor="middle" letter-spacing="0.2">HIGH</text>
+    <!-- Rivet accents -->
+    <circle cx="12" cy="140" r="4" fill="#FF6B1A" opacity="0.7"/>
+    <circle cx="140" cy="140" r="4" fill="#FF6B1A" opacity="0.4"/>
+  </g>
+
+  <!-- ── Wordmark text (right column) ── -->
+  <!-- LACS in large display weight -->
+  <text x="202" y="108"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="88"
+        font-weight="800"
+        letter-spacing="-2"
+        fill="#E8EEF4">LACS</text>
+
+  <!-- Orange underline accent under LACS -->
+  <rect x="202" y="118" width="264" height="4" rx="2" fill="url(#wm-promptGrad)" opacity="0.85"/>
+
+  <!-- Subtitle / full name -->
+  <text x="202" y="150"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="18"
+        font-weight="400"
+        letter-spacing="0.5"
+        fill="#8A9BAD">Linux Agent Control Standard</text>
+
+  <!-- Tagline -->
+  <text x="202" y="174"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="13"
+        font-weight="400"
+        letter-spacing="0.3"
+        fill="#4A5E6E">Typed actions · Risk classification · Approval gates · Audit chain</text>
+</svg>
