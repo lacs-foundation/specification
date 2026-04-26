@@ -84,19 +84,13 @@ The specification uses [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) langua
 
 ## Implementations
 
-### Reference implementation
-
-| Project | Language | Target | Status |
-|---|---|---|---|
-| [**SysKnife**](https://github.com/lacs-foundation/sysknife) | Rust | Fedora Atomic Desktops | Active |
+| Implementation | Language | Distros | Status | Repo |
+|---|---|---|---|---|
+| **SysKnife** | Rust | Fedora 41+ / Silverblue 41+ / Ubuntu 22.04 / 24.04 / 26.04 LTS | reference, production-ready | [lacs-foundation/sysknife](https://github.com/lacs-foundation/sysknife) |
 
 SysKnife is the canonical implementation of the LACS protocol. It ships `sysknife-brain` (planner), `sysknife-shell` (approval UI), and `sysknife-daemon` (privileged executor) — each in a separate crate with no cross-layer trust blurring.
 
-### Other distros / languages
-
-LACS is designed to be portable. If you are building a LACS-conforming implementation for another distribution (Ubuntu, Arch, NixOS, openSUSE, …) or in another language (Python, Go, TypeScript, …), open a PR to add it here.
-
-Conformance requirements are in [spec.md §9](spec.md).
+We welcome implementations in other languages and for other distros — see [Conformance](spec.md#12-conformance) for what's required.
 
 ---
 

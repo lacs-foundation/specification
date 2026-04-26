@@ -14,6 +14,10 @@ LACS does not specify how planning is done, which AI model is used, or which Lin
 
 ---
 
+**Status (2026-04-26):** the LACS protocol is implemented end-to-end by [SysKnife](https://github.com/lacs-foundation/sysknife) on Fedora 41+ and Ubuntu 22.04 / 24.04 / 26.04 LTS, covering 50+ typed actions across rpm-ostree, apt, snap, ufw, netplan, distrobox, AppArmor, fail2ban, Ubuntu Pro, and more.
+
+---
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
@@ -459,6 +463,29 @@ An Action Catalogue entry MUST be expressible in the following format:
 {
   "action_name": "AddLayeredPackage",
   "description": "Install a package as a layered package. Takes effect after the next reboot.",
+  "risk_level": "Medium",
+  "params": {
+    "type": "object",
+    "properties": {
+      "package": {
+        "type": "string",
+        "description": "The package name to install",
+        "minLength": 1
+      }
+    },
+    "required": ["package"]
+  }
+}
+```
+
+The same format applies across distributions — the `action_name` is
+distro-specific, but the envelope is identical. For example, an Ubuntu
+`apt`-based install:
+
+```json
+{
+  "action_name": "AptInstall",
+  "description": "Install a package via apt-get. Takes effect immediately.",
   "risk_level": "Medium",
   "params": {
     "type": "object",
